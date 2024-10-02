@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/frontend/icons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/frontend/icons/favicon-32x32.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <div class="paisagem" onclick="toggleMenu()">☰</div>
+            <h1>Paisagens Vídeos</h1>
+        </div>
+        <div class="links" id="menuLinks">
+            <a href="index.html">Home</a>
+            <a href="videos.html">Vídeos</a>
+            <a href="mapa.html">Mapa</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Lugares mais bonitos do Mundo </h2>
+        <iframe width="360" height="315" src="https://www.youtube.com/embed/DeQ9CgfPgtI?si=Noo-SRYvjaj3sTao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>As cidades mais bonitas do Mundo</h2>
+        <iframe width="360" height="315" src="https://www.youtube.com/embed/jeN1F5q7z2M?si=FDppgm_0Th3f3cCx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>A Beleza do Brasil</h2>
+        <iframe width="360" height="315" src="https://www.youtube.com/embed/kCqrXQN1pJM?si=7m-3yTWgkYy0pHsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+   
+   <script>
+        function toggleMenu() {
+            const links = document.getElementById('menuLinks');
+            links.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

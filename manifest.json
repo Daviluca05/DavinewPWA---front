@@ -1,0 +1,46 @@
+{
+    "name": "PaisagensVivas",
+    "short_name": "Paisagens",
+    "description": "Uma aplicação progressiva de exemplo para mostrar funcionalidades e melhorias.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3e4eb8",
+    "icons": [
+        {
+            "src": "/frontend/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/frontend/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/frontend/icons/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/frontend/icons/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+    {
+        "src": "/frontend/screenshots/screenshot-mobile.jpeg",
+        "sizes": "366x680", 
+        "type": "image/jpeg",
+        "form_factor": "narrow"
+    },
+    {
+        "src": "/frontend/screenshots/screenshot-desktop.jpeg",
+        "sizes": "576x359",  
+        "type": "image/jpeg",
+        "form_factor": "wide"
+    }
+]
+
+}

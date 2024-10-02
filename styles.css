@@ -1,0 +1,262 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(/frontend/icons/pic02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+h2 {
+    color:#000000;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100000000;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pontinhos{
+    color: #ffffff;
+}
+
+.pontinhos:hover{
+    color: #2000d4;
+}
+
+nav .menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav .paisagem {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+}
+
+nav h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.delete-button {
+    background-color: #ff4d4d; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px;
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.edit-button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+.button-container {
+    position: relative;
+    display:inline-flex;
+    width: auto !important;
+    box-shadow: none !important;
+    border: none !important;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+
+.delete-button:hover {
+    background-color: #ff1a1a; 
+}
+
+nav .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Esconder o conteúdo inicialmente */
+    max-height: 0; /* Altura inicial escondida */
+    transition: max-height 0.5s ease-in-out; /* Transição suave */
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+    font-size: larger;
+    font-weight: bold;
+}
+
+nav .links a {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+nav .links.show {
+    display: flex;
+    max-height: 500px; /* Altura suficiente para mostrar os links */
+}
+
+.links {
+    max-height: 0; /* Altura inicial escondida */
+    overflow: hidden; /* Evita mostrar conteúdo fora dos limites */
+    transition: max-height 0.5s ease-in-out; /* Animação suave de transição */
+}
+
+/* Quando o menu estiver visível */
+.links.show {
+    max-height: 500px; /* Defina um valor que seja grande o suficiente para mostrar o conteúdo */
+}
+
+#plantations-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens ocupem várias linhas */
+    justify-content: center; /* Centraliza os itens */
+    margin: 100px auto;
+    position: relative;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.0001); /* Fundo branco translúcido */
+    backdrop-filter: blur(2px); /* Efeito de desfoque */
+    max-width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+}
+
+#plantations-list div {
+    width: calc(33.33% - 100px); /* Ajuste de largura para que caibam 3 por linha com espaçamento */
+    margin: 10px; /* Espaçamento entre os itens */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.000); /* Fundo branco translúcido */
+    backdrop-filter: blur(0.1px); /* Efeito de desfoque */
+    border-radius: 5px;
+    box-shadow: none;
+    text-align: center;
+    color: white;
+}
+
+#plantations-list img {
+    width: 100%; /* Assegura que a imagem ocupe todo o espaço do item */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    #plantations-list div {
+        width: calc(50% - 20px); /* Em telas menores, 2 itens por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    #plantations-list div {
+        width: 100%; /* Em telas pequenas, um item por linha */
+    }
+}
+
+form {
+    width: 80%;
+    margin: 80px auto;
+    padding: 30px;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    border-radius: 5px;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="file"],
+form button {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #5539f5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+form button:hover{
+ background-color: #2000d4;
+}
+
+@media (max-width: 600px) {
+    form input[type="text"],
+    form input[type="file"],
+    form button {
+        font-size: 14px;
+    }
+}
+
+.h1conta{
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; /* Espaço após o menu */
+    padding: 20px;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(19, 18, 18, 0.2);
+    max-width: 100%;
+}
